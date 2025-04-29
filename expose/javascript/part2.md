@@ -94,4 +94,51 @@ D. Accessing the name property of the object in the Favorite Teacher property in
 
 E. Access index zero in the array of the courseLoad property of the student object
 - student.courseLoad[0]
- 
+
+# 13. Arithmetic
+A. '3' + 2
+- '32' : When `+` is used on string concatenation occurs, and 2 is just converted to '2' to allow concatenation, '3' + '2' = '32'
+
+B. '3' - 2
+- 1 : `-` only works with numbers, '3' is converted to 3, and 3 - 2 = 1
+
+C. 3 + null
+- 3 : With arithmetic, null turns into 0, 3 + 0 = 3
+
+D. '3' + null
+- '3null' : `+` when used on strings does concatenation, null is converted to 'null', '3' + 'null' = '3null'
+
+E. true + 3
+- 4 : in arithmetic, true converts to 1, 1 + 3 = 4
+
+F. false + null
+- 0 : in arithmetic, false converts to 0, null converts to 0, 0 + 0 = 0
+
+G. '3' + undefined
+- '3undefined' : `+` when used on strings does concatenation, undefined is converted to 'undefined', '3' + 'undefined' = '3undefined'
+
+H. '3' - undefined
+- 'NaN' : `-` tries to convert both terms to numbers, '3' turns into 3, undefined turns into NaN (Not a Number), because we have NaN any arithmetic done with it will result in NaN
+
+# 14. Comparison
+A. '2' > 1
+- true : When comparing different types, JS turns them into numbers, '2' turns into 2, 2 > 1 -> true
+
+B.'2' < '12'
+- false : When comparing strings, JS compares lexographically, '2' comes after '1', thus '2' < '12' -> false
+
+C. 2 == '2'
+- true : `==` does type conversion, '2' becomes 2, 2 == 2 -> true
+
+D. 2 === '2'
+- false : `===` checks for equality (no type conversion), because '2' is a string and 2 is a number they are not equal, so 2 === '2' -> flase
+
+E. true == 2
+- false : `==` does type conversion, true becomes 1, 1 == 2 -> false
+
+F. true === Boolean(2)
+- true : Boolean(2) becomes true because any non-zero number is considered true in boolean, so true === true -> true
+
+# 15. Explain the difference between the == and === operators.
+- `==` : performs type conversion and checks for equality after type conversion
+- `===` : **Does not perform type conversion**, verifies equality in type AND value 
