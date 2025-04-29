@@ -12,6 +12,9 @@ function discountPrices(prices, discount) {
   // console.log(i);
   // console.log(discountedPrice);
   // console.log(finalPrice);
+
+  // i added this line
+  console.log(discounted)
   
   return discounted;
 }
