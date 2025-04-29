@@ -158,3 +158,14 @@ The result will be [2, 4, 6]
        - doSomething(3) returns 6
     - each result is pushed to `newArr`
 4. [2, 4, 6] is returned
+
+# 18. Different file (part2-question18.js)
+
+# 19. What is the output of the above code? (This should be in your part2.md)
+The output:
+1
+4
+3
+2
+
+console.log(1) executes instantly -> 2 is scheduled to appear 1 second after the function -> 3 is scheduled to appear 0 seconds after the function -> console.log(4) executes instantly -> then 3 is printed -> then 2
