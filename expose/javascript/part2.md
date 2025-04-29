@@ -141,4 +141,20 @@ F. true === Boolean(2)
 
 # 15. Explain the difference between the == and === operators.
 - `==` : performs type conversion and checks for equality after type conversion
-- `===` : **Does not perform type conversion**, verifies equality in type AND value 
+- `===` : **Does not perform type conversion**, verifies equality in type AND value
+
+# 16. Different file (part2-question16.js)
+
+# 17. If the function above is called with the following parameters modifyArray([1,2,3], doSomething), what will be the result? Briefly walk through how you arrived at that result. (This should be in your part2.md). Here we are passing in a function as a parameter, however we can also return a function from another function just as easily, you're encouraged to play around with callbacks as they are used heavily in frontend JS development. 
+The result will be [2, 4, 6]
+1. `array` parameter receives [1, 2, 3]
+2. `callback` parameter receives `doSomething`
+3. Now, within `modifyArray`:
+   - `newArr` is made
+   - loops through input array
+   - for each element, call `callback(array[i])` which is `doSomething(num)
+       - doSomething(1) returns 2
+       - doSomething(2) returns 4
+       - doSomething(3) returns 6
+    - each result is pushed to `newArr`
+4. [2, 4, 6] is returned
