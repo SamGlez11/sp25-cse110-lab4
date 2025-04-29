@@ -29,3 +29,24 @@ ReferenceError: result is not defined
 
 Nothing is printed, the **ReferenceError** is thrown because now that result is of type `let` it has "block-scope" rather than "function-scope" meaning it can only be accessed in the if-block; therefore, when line 13 executes, result is no longer in the scope, there is no reference to it, it will not be found, and the error is thrown.
 
+# 6. What is printed by line 9? If the code returns an error, explain why.
+The following error is thrown:
+
+"/workspaces/Lab4_Starter/scripts/testing.js:7
+    result = num1 + num2;
+           ^
+
+TypeError: Assignment to constant variable.
+    at sumValues (/workspaces/Lab4_Starter/scripts/testing.js:7:12)
+    at Object.<anonymous> (/workspaces/Lab4_Starter/scripts/testing.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1529:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+    at Module._load (node:internal/modules/cjs/loader:1096:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+    at node:internal/main/run_main_module:28:49"
+
+Nothing is printed, the **TypeError** is thrown because resutl is now a `const` meaning that once it is declared its value cannot change (or else an error is thrown), so when its value is updated in line 7 afte rbeing declared the **TypeError** is thrown. Line 7 triggers the error and line 9 is not reached.
+
+# 7. What is printed by line 13? If the code returns an error, explain why. 
+Line 13 does not execute. Because an error is thrown after line 7, line 13 is not reached. Instead, all we see is the error from line 7 (see #6 for details) and no print statement or error from line 13. If the code was to reach line 13 somehow, though, it would throw **ReferenceError** similar to #5.
