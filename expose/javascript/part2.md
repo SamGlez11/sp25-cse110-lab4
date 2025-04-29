@@ -78,3 +78,16 @@ No error is thrown. "3" is printed. `length` is declared as a constant with pric
 
 # 11. What will this function return? Give a brief explanation. If the code causes an error, explain why.
 No error is thrown. An array [50, 100, 150] is returned. We know the discount functionality works as intended (50 percent discount on the array [100, 200, 300] leads to the stated return value). This works because all constants are not updated after declaration adn are declared at the beginning of the function, meaning their scope lies within the whole function. Furthermore, all other variables are properly declared and handled giving [50, 100, 150] as the return with no errors.
+
+# 12. Given the above Object, write the notation for:  (These should be in your part2.md)
+A. Accessing the value of the name property in the student object
+- student.name
+B. Accessing the value of the Grad Year property in the student object
+- student['Grad Year']
+C. Calling the function for the greeting property in the student object
+- student.greeting()
+D. Accessing the name property of the object in the Favorite Teacher property in student
+- student['Favorite Teacher'].name
+E. Access index zero in the array of the courseLoad property of the student object
+- student.courseLoad[0]
+ 
